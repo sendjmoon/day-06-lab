@@ -27,7 +27,7 @@ function makeStoreData(store) {
   var th = document.createElement('th');
   th.textContent = store.storeName;
   appendStores.appendChild(th);
-  for (var i = 0; i < store.custPerHour.length; i++) {
+  for (var i = 0; i < store.hours.length; i++) {
     var tr = document.createElement('tr');
     tr.textContent = store.hours[i] + ': ' + store.salesPerHour[i] + ' cookies';
     th.appendChild(tr);
