@@ -10,6 +10,7 @@ function Store(storeName, minHrlyCust, maxHrlyCust, avgCookiesPerCust) {
   this.minHrlyCust = minHrlyCust;
   this.maxHrlyCust = maxHrlyCust;
   this.avgCookiesPerCust = avgCookiesPerCust;
+  this.store = [];
   this.custPerHour = [];
   this.salesPerHour = [];
   this.total = 0;
@@ -25,24 +26,34 @@ function Store(storeName, minHrlyCust, maxHrlyCust, avgCookiesPerCust) {
 function makeStoreData(store) {
   var appendStores = document.getElementById('append-stores');
   var th = document.createElement('th');
-  th.textContent = store.storeName;
+  th.textContent = this.storeName;
   appendStores.appendChild(th);
-  for (var i = 0; i < store.hours.length; i++) {
+  for (var i = 0; i < this.hours.length; i++) {
     var tr = document.createElement('tr');
-    tr.textContent = store.hours[i] + ': ' + store.salesPerHour[i] + ' cookies';
+    tr.textContent = this.hours[i] + ': ' + this.salesPerHour[i] + ' cookies';
     th.appendChild(tr);
   }
   var total = document.createElement('tr');
-  total.textContent = 'Total: ' + store.total + ' cookies';
+  total.textContent = 'Total: ' + this.total + ' cookies';
   th.appendChild(total);
-}
 
-stores.push(new Store('Pike Place',17,88,5.2));
-stores.push(new Store('SeaTac Airport',6,24,1.2));
-stores.push(new Store('Southcenter',11,38,1.9));
-stores.push(new Store('Bellevue Square',20,48,3.3));
-stores.push(new Store('Alki',3,24,2.6));
+stores.push(new Store('pike',38,28,12));
 
-for (var i = 0; i < stores.length; i++) {
+for(var i = 0; i < stores.length; i++) {
   makeStoreData(stores[i]);
 }
+
+// function makeStoreData(store) {
+//   var appendStores = document.getElementById('append-stores');
+//   var th = document.createElement('th');
+//   th.textContent = store.storeName;
+//   appendStores.appendChild(th);
+//   for (var i = 0; i < store.hours.length; i++) {
+//     var tr = document.createElement('tr');
+//     tr.textContent = store.hours[i] + ': ' + store.salesPerHour[i] + ' cookies';
+//     th.appendChild(tr);
+//   }
+//   var total = document.createElement('tr');
+//   total.textContent = 'Total: ' + store.total + ' cookies';
+//   th.appendChild(total);
+// }
