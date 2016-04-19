@@ -1,0 +1,40 @@
+body {
+  background-color: firebrick;
+  font: Georgia, Times;
+}
+
+h1 {
+  font-family: 'Sigmar One', cursive;
+  font-size: 50px;
+  color: cornsilk;
+  text-shadow: 3px 3px 3px black;
+}
+
+h3 {
+  background-color: indianred;
+  font-family: 'Sigmar One', cursive;
+  font-size: 20px;
+  color: gold;
+  text-shadow: 2px 2px 2px black;
+}
+
+h4 {
+  font-family: Georgia, Times;
+  font-size: 16px;
+  color: lavender;
+  text-shadow: 2px 2px 2px black;
+}
+
+ul {
+  background-color: indianred;
+  font-family: Arial, Verdana;
+  color: whitesmoke;
+  text-shadow: 2px 2px 1px black;
+  width: 200px;
+}
+
+#disclaimer {
+  color: orange;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 25px;
+}
