@@ -11,7 +11,7 @@ var pikePlace = {
     var custPerHour = [];
     var salesPerHour = [];
     var total = 0;
-    for (var i = 0; i < 16; i++) {
+    for (var i = 0; i < hours.length; i++) {
       custPerHour.push(Math.floor(Math.random() * (this.maxHrlyCust - this.minHrlyCust) + this.minHrlyCust));
 
       var pikePlaceListItem = document.createElement('li');
@@ -40,7 +40,7 @@ var seaTac = {
     var custPerHour = [];
     var salesPerHour = [];
     var total = 0;
-    for (var i = 0; i < 16; i++) {
+    for (var i = 0; i < hours.length; i++) {
       custPerHour.push(Math.floor(Math.random() * (this.maxHrlyCust - this.minHrlyCust) + this.minHrlyCust));
 
       var seaTacListItem = document.createElement('li');
@@ -69,7 +69,7 @@ var southCenter = {
     var custPerHour = [];
     var salesPerHour = [];
     var total = 0;
-    for (var i = 0; i < 16; i++) {
+    for (var i = 0; i < hours.length; i++) {
       custPerHour.push(Math.floor(Math.random() * (this.maxHrlyCust - this.minHrlyCust) + this.minHrlyCust));
 
       var southCenterListItem = document.createElement('li');
@@ -98,7 +98,7 @@ var bellSquare = {
     var custPerHour = [];
     var salesPerHour = [];
     var total = 0;
-    for (var i = 0; i < 16; i++) {
+    for (var i = 0; i < hours.length; i++) {
       custPerHour.push(Math.floor(Math.random() * (this.maxHrlyCust - this.minHrlyCust) + this.minHrlyCust));
 
       var bellSquareListItem = document.createElement('li');
@@ -127,7 +127,7 @@ var alki = {
     var custPerHour = [];
     var salesPerHour = [];
     var total = 0;
-    for (var i = 0; i < 16; i++) {
+    for (var i = 0; i < hours.length; i++) {
       custPerHour.push(Math.floor(Math.random() * (this.maxHrlyCust - this.minHrlyCust) + this.minHrlyCust));
 
       var alkiListItem = document.createElement('li');
