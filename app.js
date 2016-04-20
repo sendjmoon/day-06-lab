@@ -66,9 +66,9 @@ var handleStoreSubmit = function(event){
   }
 
   var storeName = event.target.store.value;
-  var minCust = event.target.min.value;
-  var maxCust = event.target.max.value;
-  var avgCookies = event.target.avg.value;
+  var minCust = parseInt(event.target.min.value);
+  var maxCust = parseInt(event.target.max.value);
+  var avgCookies = parseInt(event.target.avg.value);
   var newStore = new Store(storeName,minCust,maxCust,avgCookies);
   stores.push(newStore);
   for(var i = 0; i < stores.length; i++) {
