@@ -28,14 +28,17 @@ function Store(storeName, minHrlyCust, maxHrlyCust, avgCookiesPerCust) {
 function makeStoreData(store) {
   var appendStores = document.getElementById('append-stores');
   var th = document.createElement('th');
+  th.textContent = ' ';
   th.textContent = store.storeName;
   appendStores.appendChild(th);
   for (var i = 0; i < hours.length; i++) {
     var tr = document.createElement('tr');
+    tr.textContent = ' ';
     tr.textContent = hours[i] + ': ' + store.salesPerHour[i] + ' cookies';
     th.appendChild(tr);
   }
   var total = document.createElement('tr');
+  total.textContent = ' ';
   total.textContent = 'Total: ' + store.total + ' cookies';
   th.appendChild(total);
 }
@@ -45,6 +48,44 @@ stores.push(new Store('Southcenter',11,38,1.9));
 stores.push(new Store('Bellevue Square',20,48,3.3));
 stores.push(new Store('Alki',3,24,2.6));
 
-for(var i = 0; i < stores.length; i++) {
-  makeStoreData(stores[i]);
-}
+// for(var i = 0; i < stores.length; i++) {
+//   makeStoreData(stores[i]);
+// }
+//----------------------------------------------------------
+//Forms & Events
+var storeForm = document.getElementById('store-form');
+
+var handleStoreSubmit = function(event){
+  event.preventDefault();
+  // storeName.innerHTML = ' ';
+  console.log(event);
+  if (!event.target.store.value || !event.target.min.value || !event.target.max.value || !event.target.avg.value){
+    return alert('Fields cannot be empty.');
+  } else if(isNaN(event.target.min.value) || isNaN(event.target.max.value) || isNaN(event.target.avg.value)){
+    return alert ('Must enter a number.');
+  }
+
+  var storeName = event.target.store.value;
+  var minCust = event.target.min.value;
+  var maxCust = event.target.max.value;
+  var avgCookies = event.target.avg.value;
+  var newStore = new Store(storeName,minCust,maxCust,avgCookies);
+  stores.push(newStore);
+  for(var i = 0; i < stores.length; i++) {
+    makeStoreData(stores[i]);
+  }
+  stores = [];
+};
+
+storeForm.addEventListener('submit', handleStoreSubmit);
+
+// var submitButton = document.getElementById('submit-button');
+// submitButton.addEventListener('click', comment());
+
+// function comment(){
+//   console.log(storeName + minCust + maxCust + avgCookies);
+// }
+//
+// function handleEntry(event){
+//   console.log(event);
+// }
