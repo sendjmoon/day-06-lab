@@ -43,6 +43,16 @@ function makeStoreData(store) {
   th.appendChild(total);
 }
 
+stores.push(new Store('Pike Place',17,88,5.2));
+stores.push(new Store('SeaTac Airport',6,24,1.2));
+stores.push(new Store('Southcenter',11,38,1.9));
+stores.push(new Store('Bellevue Square',20,48,3.3));
+stores.push(new Store('Alki',3,24,2.6));
+
+for (var i = 0; i < stores.length; i++) {
+  makeStoreData(stores[i]);
+}
+
 //Forms & Events
 var storeForm = document.getElementById('store-form');
 
@@ -61,16 +71,11 @@ var handleStoreSubmit = function(event){
   var avgCookies = parseInt(event.target.avg.value);
   var newStore = new Store(storeName,minCust,maxCust,avgCookies);
   stores.push(newStore);
-  for(var i = 0; i < stores.length; i++) {
-    makeStoreData(stores[i]);
-  }
+  makeStoreData(newStore);
+  // for(var i = 0; i < stores.length; i++) {
+  //   makeStoreData(stores[i]);
+  // }
   stores = [];
 };
-
-stores.push(new Store('Pike Place',17,88,5.2));
-stores.push(new Store('SeaTac Airport',6,24,1.2));
-stores.push(new Store('Southcenter',11,38,1.9));
-stores.push(new Store('Bellevue Square',20,48,3.3));
-stores.push(new Store('Alki',3,24,2.6));
 
 storeForm.addEventListener('submit', handleStoreSubmit);
