@@ -3,39 +3,42 @@
 
 <head>
   <title>Sales Information</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style-sales.css">
 </head>
 
 <body>
-  <nav id="nav">
-    <ul id="nav-list">
-      <li><a href="index.html"> Home </a></li>
-      <li><a href="about.html"> About </a></li>
-      <li><a href="sales.html"> Sales </a></li>
-      <li><a href="contact.html"> Contact </a></li>
-    </ul>
-  </nav>
+  <div id="nav">
+    <a href="index.html" class="nav-button"> Home </a>
+    <a href="about.html" class="nav-button"> About </a>
+    <a href="sales.html" class="nav-button"> Sales </a>
+    <a href="contact.html" class="nav-button"> Contact </a>
+  </div>
 
-  <form id="store-form">
-  <fieldset>
-  <label>Store Name</label>
-    <input type="text" name="store" />
-  <label>Min Customers</label>
-    <input type="text" name="min" />
-  <label>Max Customers</label>
-    <input type="text" name="max" />
-  <label>Average Cookies Per Customer</label>
-    <input type="text" name="avg" />
-  <button id="submit-button" type="submit">Submit</button>
-  </fieldset>
-</form>
-  <table>
+  <div id="form-figure">
+    <form id="store-form">
+    <fieldset>
+    <label>Store Name</label><br />
+      <input type="text" name="store" class="input" />
+    <label>Min Customers</label>
+      <input type="text" name="min" />
+    <label>Max Customers</label>
+      <input type="text" name="max" />
+    <label>Avg Cookies Per Customer</label>
+      <input type="text" name="avg" />
+    <button id="submit-button" type="submit">Submit</button>
+    </fieldset>
+    </form>
+  </div>
+
+  <div id="table-figure">
+  <table id="table-results">
     <thead>
       <tbody id="append-stores">
         <tr></tr>
       </tbody>
     </thead>
   </table>
+  </div>
   <script src = "app.js"></script>
 </body>
 
