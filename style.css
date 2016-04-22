@@ -1,6 +1,8 @@
 body {
-  background-color: firebrick;
+  background-color: maroon;
   font: Georgia, Times;
+  color: cornsilk;
+  text-shadow: 1px 1px 1px black;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -37,21 +39,20 @@ ul {
   width: 200px;
 }
 
-#nav {
-  height: 40px;
-  width: 100%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+a {
+  color: white;
+  active: white;
+  hover: yellow;
+  visited: white;
 }
 
 .nav-button {
-  background-color: red;
+  background-color: firebrick;
   width: 150px;
   height: 25px;
   margin: 20px;
 
-  border: 1px solid gray;
+  border: 1px solid black;
   box-shadow: 2px 2px 10px black;
   border-radius: 5px;
 
@@ -64,19 +65,64 @@ ul {
   align-items: center;
 }
 
-a {
-  color: white;
-  active: white;
-  hover: yellow;
-  visited: white;
+.input {
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
 }
 
-a:visited {
-  color: white;
+#submit-button {
+  width: 70px;
+  height: 20px;
+  background-color: peru;
+  border-radius: 5px;
+  border: 1px black solid;
 }
 
-a:hover {
-  color: yellow;
+#nav {
+  height: 40px;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fieldset {
+  border: none;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+#name-title {
+  width: 150px;
+  height: 30px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#hours-header, #total-header {
+  width: 50px;
+  height: 30px;
+}
+
+#td-cookies {
+  background-color: peru;
+  color: cornsilk;
+  width: 50px;
+  height: 30px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px black;
+  padding: 0;
+  margin: 0;
+}
+
+#store-name {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #disclaimer {

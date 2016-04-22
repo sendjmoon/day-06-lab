@@ -2,30 +2,33 @@
 <html>
 
 <head>
-  <title>Sales Information</title>
-  <link rel="stylesheet" type="text/css" href="style-sales.css">
+  <title>Smokin' Salmon Cookies - Sales Information</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Kanit:400,600' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+  <header> SMOKIN' SALMON COOKIES </header>
+
   <div id="nav">
-    <a href="index.html" class="nav-button"> Home </a>
-    <a href="about.html" class="nav-button"> About </a>
-    <a href="sales.html" class="nav-button"> Sales </a>
-    <a href="contact.html" class="nav-button"> Contact </a>
+    <a href="index.html" class="nav-button"> HOME </a>
+    <a href="about.html" class="nav-button"> ABOUT </a>
+    <a href="contact.html" class="nav-button"> CONTACT </a>
   </div>
 
   <div id="form-figure">
     <form id="store-form">
-    <fieldset>
-    <label>Store Name</label><br />
+    <fieldset id="fieldset">
+    <label>Store Name</label>
       <input type="text" name="store" class="input" />
-    <label>Min Customers</label>
-      <input type="text" name="min" />
-    <label>Max Customers</label>
-      <input type="text" name="max" />
-    <label>Avg Cookies Per Customer</label>
-      <input type="text" name="avg" />
-    <button id="submit-button" type="submit">Submit</button>
+    <label>Min Cust.</label>
+      <input type="text" name="min" class="input" />
+    <label>Max Cust.</label>
+      <input type="text" name="max" class="input" />
+    <label>Avg Cookies Per Cust.</label>
+      <input type="text" name="avg" class="input" />
+    <button id="submit-button" type="submit">SUBMIT</button>
     </fieldset>
     </form>
   </div>
